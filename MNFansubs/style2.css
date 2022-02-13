@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1d1d1d;
+    font-family: Roboto,sans-serif;
+}
+nav{
+    width: 100%;
+    height: 61px;
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #393939;
+}
+/*ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+*/
+nav .logo{
+    width: 14.6%;
+    height: 89%;
+    margin: 5px 10px;
+}
+nav .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+nav .menu{
+    width: 10%;
+    height: 100%;
+}
+nav .menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+nav .menu ul li{
+    list-style: none;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #393939 1px solid;
+}
+nav .menu ul li i{
+    font-size: 17px;
+    color: #999;
+} 
+#checkbox{
+    display: none;
+}
+#checkbox:checked ~* .check{
+    display: block;
+}
+.check{
+    width: 30%;
+    height: 100px;
+    top: 60px;
+    background-color: aqua;
+    z-index: 999;
+    display: none;
+}
+.zero{
+    width: 100%;
+    height: 100vh;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.main{
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    grid-template-rows: repeat(3, 200px);
+    gap: 15px;
+}
+@media screen and (min-width:260px) and (max-width:560px){
+    .main{
+        grid-template-columns: repeat(3, 24%);
+        grid-template-rows: repeat(6, 200px);
+    }
+}
+.main .child{
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.main .child img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+.main .child img:hover{
+    display: grid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: linear-gradient( to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+    border-radius: 10px;
+}
+
+
+
+.button-more{
+    width: 90%;
+    height: 40px;
+    background: #161616;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: rgba(153,153,153,.8);
+    text-decoration: none;
+}
